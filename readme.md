@@ -301,7 +301,7 @@ L’aplicació ha de mostrar **una barra superior fixa** amb el títol:
 Tal com es veu a la imatge següent:
 
 ```md
-![Barra superior de l'app](img1.png)
+![Barra superior de l'app](img4.png)
 ````
 
 #### Requisit tècnic
@@ -364,19 +364,3 @@ Tal com es veu a la imatge següent:
 
 ---
 
-## 📁 RECORDATORI SOBRE LA IMATGE
-
-### Estructura correcta al repositori
-```
-
-/img/
-└─ img4.png   ← captura de la barra superior
-
-````
-
-### Enllaç correcte al README
-```md
-![Barra superior de l'app](img4.png)
-````
-
----
