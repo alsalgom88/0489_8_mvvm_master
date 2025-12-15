@@ -219,3 +219,187 @@ Aquesta pràctica és una **base sòlida i realista** per:
 - Arquitectures escalables
 
 > **“La View mostra, el Model calcula, el ViewModel connecta.”**
+Perfecte 👍
+T’ho deixo **TOT en català**, amb to **professional, tècnic i coherent amb DAM2**, i pensat **per afegir-ho directament al README sense eliminar res del que ja tens**.
+
+👉 **Només has d’enganxar aquesta secció nova** al lloc que t’indico.
+
+---
+
+## 📍 ON afegir aquesta secció al README
+
+Afegeix-la **just després** de la secció:
+
+```md
+## 🧩 Components del projecte
+```
+
+És el punt correcte perquè l’alumnat ja entén l’arquitectura base i ara toca **modificar-la correctament**.
+
+---
+
+## 🛠️ SECCIÓ NOVA — MODIFICACIONS OBLIGATÒRIES (EN CATALÀ)
+
+### 👉 Copia i enganxa **TAL QUAL** al README
+
+````md
+---
+
+## 🛠️ Modificacions obligatòries sobre el projecte base
+
+El projecte proporcionat **NO és una solució final**.  
+És una **base arquitectònica correcta** sobre la qual hauràs d’implementar millores **respectant estrictament l’arquitectura MVVM**.
+
+Aquestes modificacions **formen part de l’avaluació** i no es poden resoldre amb simples canvis visuals.
+
+---
+
+### 1️⃣ Interès variable segons el termini
+
+#### Requisit funcional
+El tipus d’interès **NO pot ser fix**.  
+Ha de variar segons el nombre d’anys de la hipoteca.
+
+#### Condicions mínimes
+- **< 15 anys** → interès més baix  
+- **15 – 25 anys** → interès mitjà  
+- **> 25 anys** → interès més alt  
+
+#### Requisit arquitectònic
+📍 **La lògica d’interès va exclusivament al Model**
+
+✔️ `SimuladorHipoteca`  
+❌ `MiHipotecaFragment`  
+❌ `MiHipotecaViewModel`
+
+📌 El ViewModel **no decideix interessos**, només gestiona estat i comunicació amb la View.
+
+---
+
+### 2️⃣ Nou error de negoci: capital màxim
+
+#### Requisit funcional
+Si el capital sol·licitat supera un límit (per exemple **500.000 €**):
+- El càlcul **NO s’executa**
+- L’usuari ha de veure un **missatge d’error clar**
+
+#### Requisit arquitectònic
+- El **Model detecta l’error**
+- El **ViewModel l’exposa com a `LiveData`**
+- La **View només mostra l’error**
+
+🚫 No es permet:
+- Mostrar `Toast` des del Model
+- Validació de negoci al Fragment
+- Decisions de negoci a la View
+
+📌 Els errors també són **estat observable**.
+
+---
+
+### 3️⃣ Bloqueig del botó mentre es calcula
+
+#### Requisit funcional
+Mentre el càlcul està en curs:
+- El botó **Calcular** ha d’estar **desactivat**
+- El progrés ha de ser **visible**
+
+📌 El botó **NO reacciona a callbacks directes**  
+📌 El botó **reacciona a l’estat exposat pel ViewModel**
+
+Això evita:
+- Accions duplicades
+- Errors d’estat
+- Mala experiència d’usuari
+
+---
+
+### 4️⃣ Barra superior visible (AppBar / Toolbar)
+
+#### Requisit funcional
+L’aplicació ha de mostrar **una barra superior fixa** amb el títol:
+
+> **Quota Hipoteca**
+
+Tal com es veu a la imatge següent:
+
+```md
+![Barra superior de l'app](img1.png)
+````
+
+#### Requisit tècnic
+
+* La barra **NO pot estar dins del Fragment**
+* Ha de formar part de l’`Activity` o del layout base
+* Ha de ser coherent amb el sistema de navegació
+
+📌 Aquesta modificació reforça un principi clau:
+
+> **L’Activity és contenidor i marc de navegació, no lògica.**
+
+---
+
+## 🔹 Modificacions opcionals (escull mínim 1)
+
+### 🔸 A) Cancel·lació del càlcul
+
+* Afegir un botó **Cancel·lar**
+* En cancel·lar:
+
+  * No es mostra cap resultat
+  * El progrés s’atura correctament
+
+---
+
+### 🔸 B) Simulació d’error de servidor
+
+* El Model pot fallar aleatòriament
+* L’error s’exposa com a estat observable
+* L’aplicació **NO pot fer crash**
+
+---
+
+### 🔸 C) Persistència de l’últim càlcul
+
+* Guardar capital, termini i quota
+* Recuperar-los en reobrir l’app
+
+---
+
+### 🔸 D) Refactorització a Coroutines (nivell avançat)
+
+* Substituir `Executor` per `viewModelScope`
+* Mantenir exactament el mateix comportament observable
+
+---
+
+## 🚫 Prohibicions explícites
+
+❌ Lògica de negoci al Fragment
+❌ Càlculs al fil principal
+❌ Accés directe del Fragment al Model
+❌ Ús de `AsyncTask`
+❌ Solucions “ràpides” fora de MVVM
+
+📌 Si una funcionalitat funciona però està a la capa incorrecta, **està malament**.
+
+```
+
+---
+
+## 📁 RECORDATORI SOBRE LA IMATGE
+
+### Estructura correcta al repositori
+```
+
+/img/
+└─ img4.png   ← captura de la barra superior
+
+````
+
+### Enllaç correcte al README
+```md
+![Barra superior de l'app](img4.png)
+````
+
+---
