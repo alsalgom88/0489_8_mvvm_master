@@ -41,7 +41,7 @@ L’objectiu **no és fer una simple calculadora**, sinó **entendre i aplicar c
 ---
 
 ## 🏗️ Estructura COMPLETA del projecte
-
+```
 app/
 ├─ manifests/
 │  └─ AndroidManifest.xml
@@ -81,7 +81,7 @@ app/
 │  ├─ build.gradle.kts (Module: app)
 │  ├─ gradle.properties
 │  └─ proguard-rules.pro
-
+```
 ---
 
 ## 🧩 Components del projecte
