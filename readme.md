@@ -219,30 +219,7 @@ Aquesta pràctica és una **base sòlida i realista** per:
 - Arquitectures escalables
 
 > **“La View mostra, el Model calcula, el ViewModel connecta.”**
-Perfecte 👍
-T’ho deixo **TOT en català**, amb to **professional, tècnic i coherent amb DAM2**, i pensat **per afegir-ho directament al README sense eliminar res del que ja tens**.
 
-👉 **Només has d’enganxar aquesta secció nova** al lloc que t’indico.
-
----
-
-## 📍 ON afegir aquesta secció al README
-
-Afegeix-la **just després** de la secció:
-
-```md
-## 🧩 Components del projecte
-```
-
-És el punt correcte perquè l’alumnat ja entén l’arquitectura base i ara toca **modificar-la correctament**.
-
----
-
-## 🛠️ SECCIÓ NOVA — MODIFICACIONS OBLIGATÒRIES (EN CATALÀ)
-
-### 👉 Copia i enganxa **TAL QUAL** al README
-
-````md
 ---
 
 ## 🛠️ Modificacions obligatòries sobre el projecte base
