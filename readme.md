@@ -83,6 +83,11 @@ app/
 │  └─ proguard-rules.pro
 ```
 ---
+## 📂 Estructura del projecte (Android Studio)
+
+![Estructura del projecte](img1.png)
+
+---
 
 ## 🧩 Components del projecte
 
