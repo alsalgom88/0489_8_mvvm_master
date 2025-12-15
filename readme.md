@@ -351,12 +351,13 @@ Tal com es veu a la imatge següent:
 ---
 
 ## 🚫 Prohibicions explícites
-
+```
 ❌ Lògica de negoci al Fragment
 ❌ Càlculs al fil principal
 ❌ Accés directe del Fragment al Model
 ❌ Ús de `AsyncTask`
 ❌ Solucions “ràpides” fora de MVVM
+```
 
 📌 Si una funcionalitat funciona però està a la capa incorrecta, **està malament**.
 ---
