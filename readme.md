@@ -300,9 +300,9 @@ L’aplicació ha de mostrar **una barra superior fixa** amb el títol:
 
 Tal com es veu a la imatge següent:
 
-```md
+
 ![Barra superior de l'app](img4.png)
-````
+
 
 #### Requisit tècnic
 
@@ -361,6 +361,3 @@ Tal com es veu a la imatge següent:
 📌 Si una funcionalitat funciona però està a la capa incorrecta, **està malament**.
 
 ```
-
----
-
