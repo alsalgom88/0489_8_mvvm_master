@@ -359,5 +359,4 @@ Tal com es veu a la imatge següent:
 ❌ Solucions “ràpides” fora de MVVM
 
 📌 Si una funcionalitat funciona però està a la capa incorrecta, **està malament**.
-
-```
+---
